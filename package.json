@@ -56,10 +56,9 @@
     }
   },
   "lint-staged": {
-    "package/**/*.{jsx,tsx,ts,js,json,css,md}": [
+    "packages/**/*.{jsx,tsx,ts,js,json,css,md}": [
       "prettier --write",
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ]
   },
   "dependencies": {

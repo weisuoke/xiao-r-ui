@@ -1,0 +1,29 @@
+{
+  "name": "card",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "梅林的法杖 <530264127@qq.com>",
+  "homepage": "https://github.com/weisuoke/xiao-r-ui#readme",
+  "license": "ISC",
+  "main": "lib/card.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weisuoke/xiao-r-ui.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/weisuoke/xiao-r-ui/issues"
+  },
+  "dependencies": {
+    "react": "^17.0.2"
+  }
+}

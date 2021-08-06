@@ -4,7 +4,8 @@
   "scripts": {
     "bootstrap": "yarn --frozen-lockfile && npx lerna bootstrap",
     "build": "yarn bootstrap && yarn clean:lib",
-    "clean:lib": "rimraf lib && rimraf es && rimraf dist"
+    "clean:lib": "rimraf lib && rimraf es && rimraf dist",
+    "lint:lint-staged": "lint-staged"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",

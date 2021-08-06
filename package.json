@@ -5,7 +5,9 @@
     "bootstrap": "yarn --frozen-lockfile && npx lerna bootstrap",
     "build": "yarn bootstrap && yarn clean:lib",
     "clean:lib": "rimraf lib && rimraf es && rimraf dist",
-    "lint:lint-staged": "lint-staged"
+    "lint:lint-staged": "lint-staged",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -13,10 +15,15 @@
     "@commitlint/config-conventional": "^13.1.0",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-node-resolve": "^13.0.4",
+    "@storybook/addon-actions": "^6.3.6",
+    "@storybook/addon-essentials": "^6.3.6",
+    "@storybook/addon-links": "^6.3.6",
+    "@storybook/react": "^6.3.6",
     "@types/node": "^16.4.12",
     "@types/react": "^17.0.15",
     "@typescript-eslint/eslint-plugin": "^4.29.0",
     "@typescript-eslint/parser": "^4.29.0",
+    "babel-loader": "^8.2.2",
     "commitizen": "^4.2.4",
     "conventional-changelog-cli": "^2.1.1",
     "crossenv": "^0.0.2-security",
@@ -62,6 +69,8 @@
     ]
   },
   "dependencies": {
-    "react": "^17.0.2"
+    "prop-type": "^0.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }

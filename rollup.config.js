@@ -2,10 +2,11 @@ import path from 'path';
 import esbuild from 'rollup-plugin-esbuild';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import { getPackagesSync } from '@lerna/project';
+import less from 'rollup-plugin-less';
 import pkg from './package.json';
 
 const deps = Object.keys(pkg.dependencies);
-const inputs = getPackagesSync().map((pkg) => pkg.name);
+const inputs = getPackagesSync().map((input) => input.name);
 
 const getOutFile = (name, dir = 'lib') => {
   return `${dir}/${name}/index.js`;
@@ -24,7 +25,7 @@ export default inputs.map((name) => ({
       exports: 'named',
     },
   ],
-  plugins: [esbuild(), nodeResolve()],
+  plugins: [esbuild(), nodeResolve(), less()],
   external(id) {
     return deps.some((k) => new RegExp(`^${k}`).test(id));
   },
